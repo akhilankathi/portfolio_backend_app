@@ -23,4 +23,8 @@ export class ContactService {
   remove(id: number) {
     return `This action removes a #${id} contact`;
   }
+
+  downloadResume(){
+    return 
+  }
 }

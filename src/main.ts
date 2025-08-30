@@ -5,7 +5,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
    app.enableCors({
     origin: [
-      "https://zany-robot-gwpw654r5g9f9vxx-5173.app.github.dev",   
+      "https://zany-robot-gwpw654r5g9f9vxx-5173.app.github.dev", 
+      "http://localhost:5173/",  
       "https://akhilankathi.netlify.app"
     ],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
