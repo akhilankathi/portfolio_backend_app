@@ -3,6 +3,7 @@ import { CreateExperianceDto } from './dto/create-experiance.dto';
 import { UpdateExperianceDto } from './dto/update-experiance.dto';
 import { Experience } from 'src/interface';
 import { experiences } from 'src/constants';
+import { UiBaseReponse } from 'src/dtos';
 
 @Injectable()
 export class ExperianceService {
@@ -11,8 +12,14 @@ export class ExperianceService {
     return 'This action adds a new experiance';
   }
 
-  findAll() {
-    return `This action returns all experiance`;
+  async findAll():Promise<UiBaseReponse<Experience[]>> {
+     let reponse: UiBaseReponse<Experience[]> ={
+          reponseCode : 200,
+          reponseMessage : 'success',
+          data : []
+        }
+        reponse.data = await this.experiance
+        return reponse
   }
 
   findOne(id: number) {

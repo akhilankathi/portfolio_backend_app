@@ -19,7 +19,7 @@ export class ProjectsService {
       reponseMessage : 'success',
       data : []
     }
-    reponse.data = await projects
+    reponse.data = await this.projects
     return reponse
   }
 
